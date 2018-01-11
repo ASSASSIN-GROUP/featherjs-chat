@@ -106,7 +106,7 @@ const addMessage = message => {
     <div class="message-wrapper">
       <p class="message-header">
         <span class="username font-600">${user.email}</span>
-        <span class="sent-date font-300">${moment(message.createdAt).format('MMM Do, hh:mm:ss')}</span>
+        <span class="sent-date font-300">${moment(message.createdAt).format('MMM Do, HH:mm:ss')}</span>
       </p>
       <p class="message-content font-300">${text}</p>
     </div>
