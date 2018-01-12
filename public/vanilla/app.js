@@ -23,18 +23,18 @@ const loginHTML = `<main class="login container">
     <div class="col-12 col-6-tablet push-3-tablet col-4-desktop push-4-desktop">
       <form class="form">
         <fieldset>
-          <input class="block" type="email" name="email" placeholder="email">
+          <input class="block" type="email" name="email" placeholder="Email">
         </fieldset>
 
         <fieldset>
-          <input class="block" type="password" name="password" placeholder="password">
+          <input class="block" type="password" name="password" placeholder="Password">
         </fieldset>
 
-        <button type="button" id="login" class="button button-primary block signup">
+        <button type="button" id="login" class="btn btn-success btn-lg block signup">
           Log in
         </button>
 
-        <button type="button" id="signup" class="button button-primary block signup">
+        <button type="button" id="signup" class="btn btn-warning btn-lg block signup" style="float: right;">
           Sign up and log in
         </button>
       </form>
@@ -62,7 +62,7 @@ const chatHTML = `<main class="flex flex-column">
 
       <ul class="flex flex-column flex-1 list-unstyled user-list"></ul>
       <footer class="flex flex-row flex-center">
-        <a href="#" id="logout" class="button button-primary">
+        <a href="#" id="logout" class="btn btn-danger">
           Sign Out
         </a>
       </footer>
@@ -73,7 +73,7 @@ const chatHTML = `<main class="flex flex-column">
 
       <form class="flex flex-row flex-space-between" id="send-message">
         <input type="text" name="text" class="flex flex-1">
-        <button class="button-primary" type="submit">Send</button>
+        <button class="btn btn-success" type="submit">Send</button>
       </form>
     </div>
   </div>
@@ -114,7 +114,7 @@ const addMessage = message => {
       <div class="message-wrapper">
         <p class="message-header">
           <span class="username font-600">${user.email}</span>
-          <span class="sent-date font-300">${moment(message.createdAt).format('MMM Do, hh:mm:ss')}</span>
+          <span class="sent-date font-300">${moment(message.createdAt).format('MMM Do YYYY, HH:mm:ss')}</span>
         </p>
         <p class="message-content font-300">${text}</p>
       </div>
@@ -127,7 +127,7 @@ const addMessage = message => {
 // Show the login page
 const showLogin = (error = {}) => {
   if(document.querySelectorAll('.login').length) {
-    document.querySelector('.heading').insertAdjacentHTML('beforeend', `<p>There was an error: ${error.message}</p>`);
+    document.querySelector('.heading').insertAdjacentHTML('beforeend', `<p class="error">These fields are required: ${error.message}</p>`);
   } else {
     document.getElementById('app').innerHTML = loginHTML;
   }
