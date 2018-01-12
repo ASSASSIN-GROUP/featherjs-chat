@@ -47,6 +47,10 @@ a:focus {
   color: #ffffff;
 }
 
+.error {
+  color: #AF004C;
+}
+
 /* ======================================= */
 /* Home Page */
 /* ======================================= */
@@ -140,7 +144,7 @@ header.title-bar span.title {
 
 aside.sidebar {
   background: #f8f8f8;
-  // height: 100%;
+  height: 100%;
   max-width: 340px;
   padding: 15px;
   border-right: 1px solid #f1f1f1;
@@ -186,7 +190,7 @@ aside.sidebar .username {
 }
 
 aside.sidebar footer {
-  // min-height: 60px;
+  min-height: 60px;
 }
 
 /* Main Chat */
@@ -220,7 +224,7 @@ main.chat .message p.message-header {
 }
 
 main.chat .message p.message-header span.sent-date {
-  color: #969696;
+  color: #AF004C;
 }
 
 /* Send Message Form */
